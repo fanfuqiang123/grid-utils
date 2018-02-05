@@ -1,10 +1,15 @@
 ### 关于GRID++的Java C\S调用实例
-> 基于jacob-1.14.3的实现  
+> 基于jacob-1.14.3的实现   在bin目录下的jar目录下有相关的编译后的jar包,直接导入后即可使用
 
 ##### 1. 运行环境准备
 1. 首先从GRID++官网[http://www.rubylong.cn/](http://www.rubylong.cn/)下载最新的GRID++编辑器,以及插件 
 2. 拷贝gregn6.dll到jvm的bin目录下
 3. 拷贝jacob-1.14.3.dll到jvm的bin目录下  
+
+依赖 
+ 'com.alibaba:fastjson:1.2.41',
+ 'net.sf.jacob-project:jacob:1.14.3'
+
 
 ##### 2. 方法说明
 | 方法名称        | 方法说明    |    
