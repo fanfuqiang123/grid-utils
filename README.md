@@ -1,5 +1,5 @@
 ### 关于GRID++的Java C\S调用实例
-> 基于jacob-1.14.3的实现   在bin目录下的jar目录下有相关的编译后的jar包,直接导入后即可使用
+> 基于jacob-1.14.3的实现   在bin目录下的jar目录下有相关的编译后的jar包,或则在百度网盘中下载地址:[https://pan.baidu.com/s/1i7pdteX](https://pan.baidu.com/s/1i7pdteX)
 
 ##### 1. 运行环境准备
 1. 首先从GRID++官网[http://www.rubylong.cn/](http://www.rubylong.cn/)下载最新的GRID++编辑器,以及插件 
