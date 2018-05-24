@@ -4,8 +4,8 @@
 ##### 1. 运行环境准备 
 __依赖__:net.sf.jacob-project:jacob:1.14.3 
 
-1.首先从GRID++官网http://www.rubylong.cn/下载最新的GRID++编辑器,以及插件
-2.拷贝jacob-1.14.3.dll到jvm的bin目录下,让dll加载成功
+1. 首先从GRID++官网http://www.rubylong.cn/下载最新的GRID++编辑器,以及插件   
+2. 拷贝jacob-1.14.3.dll到jvm的bin目录下,让dll加载成功
 > 环境准备好了,运行TestRubylongCoreJacobImp测试类进行测试
 ##### 2. 方法说明
 | 方法名称        | 方法说明    |    
@@ -25,6 +25,6 @@ __依赖__:net.sf.jacob-project:jacob:1.14.3
 
 ##### 3.资源下载
 
-(res/grbsctl6/grbsctl6.exe)[锐浪报表6.5]  
-(res/jacob/jacob-1.18.zip)[jacob-1.18]  
-(res/gridUtils/grid-utils.jar)[grid-utils.0.0.2.jar]  
+1. [锐浪报表6.5](res/grbsctl6/grbsctl6.exe)  
+2. [jacob-1.18](res/jacob/jacob-1.18.zip)  
+3. [grid-utils.0.0.2.jar](res/gridUtils/grid-utils.jar)
