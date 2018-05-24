@@ -8,6 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.grid.models.enums.ExportType;
+import com.grid.models.enums.GridVersion;
 import com.grid.models.interfaces.RubylongCore;
 
 public class TestRubylongCoreJacobImp {
@@ -18,8 +19,7 @@ public class TestRubylongCoreJacobImp {
 	private String gridData;
 	@Before 
 	public void bootstrap() {
-		 rlc = new RubylongCoreJacobImp();
-		 
+		 rlc =  RubylongCoreJacobImp.getRubylongCore(GridVersion.V6_5);
 		 //报表的模版,其实就是以文本方式打开grf
 		 gridTemplate="Object Report\r\n" + 
 		 		"	Version='5.8.0.3'\r\n" + 

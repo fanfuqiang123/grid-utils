@@ -11,6 +11,7 @@ import java.util.Map;
 import com.alibaba.fastjson.JSON;
 import com.grid.models.enums.ExportType;
 import com.grid.models.enums.GenerateStyle;
+import com.grid.models.enums.GridVersion;
 import com.grid.models.interfaces.Json;
 import com.grid.models.interfaces.RubylongCore;
 import com.jacob.activeX.ActiveXComponent;
@@ -43,7 +44,7 @@ public class RubylongCoreJacobImp  implements RubylongCore{
 	}
 	
 
-	public RubylongCoreJacobImp() {
+	protected RubylongCoreJacobImp(GridVersion version) {
 		ComThread.InitSTA();
 		com = new ActiveXComponent("gregn.GridppReport.6");
 		disp = com.getObject();
@@ -112,5 +113,13 @@ public class RubylongCoreJacobImp  implements RubylongCore{
 	public void about() {
 		Dispatch.call(disp, "About");		
 	}
+	private static RubylongCore rlc ;
+	public static RubylongCore getRubylongCore(GridVersion gridVersion) {
+		if(rlc==null) {
+			rlc=new RubylongCoreJacobImp(gridVersion);
+		}
+		return rlc;
+	}
+	
 
 }
