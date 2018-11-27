@@ -23,11 +23,10 @@ __依赖__:net.sf.jacob-project:jacob:1.14.3
 |Release|释放资源|  
 |getVersion|获取当前对应的Grid++Report的版本
 
-##### 3.资源下载
+##### 3. 资源下载
 
 1. [锐浪报表6.5](res/grbsctl6/grbsctl6.exe)  
 2. [jacob-1.18](res/jacob/jacob-1.18.zip)  
 3. [grid-utils.0.0.2.jar](res/gridUtils/grid-utils.jar)
-
 
 > 最近大家有问题都是发的邮件，是否可以在github里面编辑iess这样大家遇到的问题，其他人也可以进行一起讨论
