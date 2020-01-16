@@ -1,9 +1,11 @@
 package com.grid.models.enums;
+
 /**
  * 指定数据导出的类型。
+ * 
  * @author zhangj
- * @date   2018-05-23 22:12:34
- * @email  zhangjin0908@hotmail.com
+ * @date 2018-05-23 22:12:34
+ * @email zhangjin0908@hotmail.com
  */
 public enum ExportType {
 	/**
@@ -35,12 +37,12 @@ public enum ExportType {
 	 */
 	gretIMG(7);
 	private int value;
-	
+
 	public int getValue() {
 		return value;
 	}
 
 	ExportType(int value) {
-		this.value=value;
+		this.value = value;
 	}
 }
