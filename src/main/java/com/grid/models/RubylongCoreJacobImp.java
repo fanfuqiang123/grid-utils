@@ -1,17 +1,13 @@
 package com.grid.models;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.alibaba.fastjson.JSON;
 import com.grid.models.enums.ExportType;
 import com.grid.models.enums.GenerateStyle;
 import com.grid.models.enums.GridVersion;
+import com.grid.models.enums.ImageType;
 import com.grid.models.interfaces.Json;
 import com.grid.models.interfaces.RubylongCore;
 import com.jacob.activeX.ActiveXComponent;
@@ -84,6 +80,13 @@ public class RubylongCoreJacobImp  implements RubylongCore{
 		 Dispatch.call(disp, "Print",new Variant(showPrintDialog));
 	}
 
+	
+	@Override
+	public boolean fnLoadDataFromURL(String url) {
+		Variant v = Dispatch.call(disp, "LoadDataFromURL",new Variant(url));
+		return v.getBoolean();
+	}
+	
 	@Override
 	public boolean fnLoadDataFromXML(String data) {
 		Variant v = Dispatch.call(disp, "LoadDataFromXML",new Variant(data));
@@ -98,11 +101,35 @@ public class RubylongCoreJacobImp  implements RubylongCore{
 	}
 
 	@Override
+	public void fnExportImg(ImageType imageType, String fileName, boolean allInOne, boolean doneOpen){
+		Dispatch ExportOption = Dispatch.call(disp, "PrepareExport", new Variant(ExportType.gretIMG.getValue())).getDispatch();
+		Dispatch E2IMGOption = Dispatch.get(ExportOption, "AsE2IMGOption").getDispatch();
+		Dispatch.put(E2IMGOption, "ImageType", new Variant(imageType.getValue()));
+		Dispatch.put(E2IMGOption, "AllInOne", new Variant(allInOne));
+		Dispatch.put(E2IMGOption, "FileName", new Variant(fileName));
+		Dispatch.call(disp, "Export", new Variant(doneOpen));
+		Dispatch.call(disp, "UnprepareExport");
+	}
+
+
+	@Override
 	public boolean fnExportDirect(ExportType exportType, String fileName, boolean showOptionDlg, boolean doneOpen) {
 		Variant v = Dispatch.call(disp, "ExportDirect",new Variant(exportType.getValue()),new Variant(fileName),new Variant(showOptionDlg),new Variant(doneOpen));
 		return v.getBoolean();
 	}
 
+	@Override
+	public boolean fnLoadFromURL(String url) {
+		Variant v = Dispatch.call(disp, "LoadFromURL",new Variant(url));
+		return v.getBoolean();
+	}
+	
+	@Override
+	public boolean fnLoadFromFile(String fileName) {
+		Variant v = Dispatch.call(disp, "LoadFromFile",new Variant(fileName));
+		return v.getBoolean();		
+	}
+	
 	@Override
 	public boolean fnLoadFromStr(String template) {
 		Variant v = Dispatch.call(disp, "LoadFromStr",new Variant(template));
@@ -113,7 +140,9 @@ public class RubylongCoreJacobImp  implements RubylongCore{
 	public void about() {
 		Dispatch.call(disp, "About");		
 	}
+
 	private static RubylongCore rlc ;
+
 	public static RubylongCore getRubylongCore(GridVersion gridVersion) {
 		if(rlc==null) {
 			rlc=new RubylongCoreJacobImp(gridVersion);
