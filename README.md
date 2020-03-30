@@ -30,3 +30,7 @@ __依赖__:net.sf.jacob-project:jacob:1.14.3
 3. [grid-utils.0.0.2.jar](res/gridUtils/grid-utils.jar)
 
 > 最近大家有问题都是发的邮件，是否可以在github里面编辑iess这样大家遇到的问题，其他人也可以进行一起讨论
+
+#### 如果有问题，可以联系Wechat或者手机号码 - 
+
+Wechat/手机号码 Base64： MTg4MjcwMDU2OTQ=  
