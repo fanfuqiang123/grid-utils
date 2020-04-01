@@ -5,8 +5,10 @@
 __依赖__:net.sf.jacob-project:jacob:1.14.3 
 
 1. 首先从GRID++官网`http://www.rubylong.cn/`下载最新的GRID++编辑器,以及插件   
-2. 拷贝jacob-1.14.3.dll到jvm的bin目录下,让dll加载成功
+2. 拷贝jacob-1.14.3.dll `https://sourceforge.net/projects/jacob-project/files/jacob-project/1.14.3/` 到jvm的bin目录下,让dll加载成功
 > 环境准备好了,运行TestRubylongCoreJacobImp测试类进行测试
+
+
 ##### 2. 方法说明
 | 方法名称        | 方法说明    |    
 | --------       | -----   |    
