@@ -945,8 +945,7 @@ public class TestRubylongCoreJacobImp {
 	 */
 	@Test
 	public void testFnPrint() {
-		rlc.fnLoadFromStr(gridTemplate);
-		rlc.fnLoadDataFromXML(gridData);
+		rlc.fnLoadFromFile("C:\\Users\\zhangj\\Desktop\\导出文件+源文件\\verificationCertificate.grf");
 		rlc.fnPrint(true);
 	}
 	
@@ -979,7 +978,9 @@ public class TestRubylongCoreJacobImp {
 	 */
 	@Test
 	public  void testFnExportDirect() {
-		rlc.fnExportDirect(ExportType.gretCSV, "123", true, true);
+		rlc.fnLoadFromStr(gridTemplate);
+		rlc.fnLoadDataFromXML(gridData);
+		rlc.fnExportDirect(ExportType.gretPDF, "123", true, true);
 	}
 	
 }
