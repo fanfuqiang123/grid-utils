@@ -31,3 +31,10 @@ __依赖__:net.sf.jacob-project:jacob:1.14.3
 #### 如果有问题，可以联系Wechat或者手机号码 - 
 
 Wechat/手机号码 Base64： MTg4MjcwMDU2OTQ=  
+
+## 打赏
+
+|微信 | 支付宝
+|---- |-------
+| <img src="https://rwp.pub/img/wechat.jpg" width="240" />|   <img src="https://rwp.pub/img/alipay.jpg" width="240" />
+
