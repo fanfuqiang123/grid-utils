@@ -34,13 +34,3 @@ __依赖__:net.sf.jacob-project:jacob:1.14.3
 
 Wechat/手机号码 Base64： MTg4MjcwMDU2OTQ=  
 
-## 打赏
-
-|微信 | 支付宝
-|---- |-------
-| <img src="https://rwp.pub/img/wechat.jpg" width="240" />|   <img src="https://rwp.pub/img/alipay.jpg" width="240" />
-
-## 感谢以下人员对此项目的支持
-
-
-- 杨天哲(dayday) 打赏此项目10元
